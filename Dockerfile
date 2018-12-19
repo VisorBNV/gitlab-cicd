@@ -1,6 +1,7 @@
-FROM docker:stable
+FROM alpine:3.8
+#docker:stable
 
-RUN apk add --no-cache openssh py-pip curl git && \
+RUN apk add --no-cache openssh docker py-pip curl git && \
   pip install --upgrade pip && \
   pip install docker-compose && \
   rm -rf /var/cache/apk/*
